@@ -1,6 +1,7 @@
 import os
 import requests
 from datetime import datetime, timedelta
+import re
 
 
 class FileManager:
@@ -13,7 +14,7 @@ class FileManager:
     def save_filings(self):
         saved_files = []
         current_date = datetime.now()
-        week_ago = current_date - timedelta(days=7)
+        day_ago = current_date - timedelta(days=1)
         for filing in self.filings:
             accession_number = filing['accessionNumber']
             primary_document = filing['primaryDocument']
@@ -21,7 +22,7 @@ class FileManager:
             response = requests.get(url, headers={"User-Agent": "CompanyName/YourName (YourEmail)"})
             if response.status_code == 200:
                 file_name = self._generate_filename(filing)
-                folder_path = os.path.join(self.base_folder, self.company_name, f"Week_of_{week_ago.strftime('%Y-%m-%d')}")
+                folder_path = os.path.join(self.base_folder, self.company_name, f"Day_of_{day_ago.strftime('%Y-%m-%d')}")
                 os.makedirs(folder_path, exist_ok=True)
                 file_path = os.path.join(folder_path, file_name)
                 with open(file_path, "wb") as file:
@@ -41,3 +42,23 @@ class FileManager:
             file_extension = ".html"
         file_name += file_extension
         return file_name
+
+class FileConverter:
+    def __init__(self, file_path):
+        self.file_path = file_path
+    
+    def convert_to_text(self):
+        # Read the file content
+        with open(self.file_path, 'rb') as file:
+            content = file.read().decode('utf-8')
+        
+        # Check if the file is HTML and remove tags if it is
+        if os.path.splitext(self.file_path)[1].lower() == '.html':
+            content = re.sub('<[^<]+?>', '', content)
+        
+        # Save the processed content to a .txt file
+        new_file_path = os.path.splitext(self.file_path)[0] + '.txt'
+        with open(new_file_path, 'w', encoding='utf-8') as new_file:
+            new_file.write(content)
+        
+        return new_file_path

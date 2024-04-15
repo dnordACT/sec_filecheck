@@ -14,8 +14,8 @@ class DatabaseManager:
             date TEXT NOT NULL,
             company_name TEXT NOT NULL,
             source TEXT NOT NULL,
-            summary TEXT,
-            link TEXT NOT NULL  -- Add this line for the new 'link' column
+            link TEXT NOT NULL,
+            summary TEXT
         );
         """
         with sqlite3.connect(self.db_path) as conn:
@@ -23,11 +23,11 @@ class DatabaseManager:
             cursor.execute(create_table_query)
             conn.commit()
 
-    def update_summary(self, company_name, source, summary, link):
+    def update_summary(self, company_name, source, link, summary=None):
         """Insert a new summary into the database, now including the 'link'."""
         today = datetime.now().date().strftime("%Y-%m-%d")
         with sqlite3.connect(self.db_path) as conn:
             cur = conn.cursor()
-            cur.execute("""INSERT INTO summaries (date, company_name, source, summary, link) 
-                           VALUES (?, ?, ?, ?, ?)""", (today, company_name, source, summary, link))
+            cur.execute("""INSERT INTO summaries (date, company_name, source, link, summary) 
+                           VALUES (?, ?, ?, ?, ?)""", (today, company_name, source, link, summary))
             conn.commit()
