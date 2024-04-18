@@ -12,7 +12,7 @@ def get_db_connection():
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute("SELECT * FROM summaries")
+    cur.execute("SELECT * FROM summaries ORDER BY date(date) DESC")
     summaries = cur.fetchall()
     conn.close()
     return render_template('index.html', summaries=summaries)
