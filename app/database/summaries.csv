@@ -1,0 +1,11 @@
+id,date,company_name,source,link,summary
+1,2024-04-15,M&T Bank Corp.,2024-04-15_8-K_016126,https://sec.gov/Archives/edgar/data/0000036270/000162828024016126/mbt-20240415.htm,
+2,2024-04-15,M&T Bank Corp.,2024-04-15_8-K_003304,https://sec.gov/Archives/edgar/data/0000036270/000095012324003304/mtb-20240415.htm,
+3,2024-04-15,Bank of America Corp.,2024-04-15_424B2_005173,https://sec.gov/Archives/edgar/data/0000070858/000148105724005173/form424b2.htm,
+4,2024-04-15,Bank of America Corp.,2024-04-15_424B2_005169,https://sec.gov/Archives/edgar/data/0000070858/000148105724005169/form424b2.htm,
+5,2024-04-15,Bank of America Corp.,2024-04-15_FWP_005167,https://sec.gov/Archives/edgar/data/0000070858/000148105724005167/formfwp-bac.htm,
+6,2024-04-15,Eversource Energy,2024-04-15_424B3_047040,https://sec.gov/Archives/edgar/data/0000072741/000110465924047040/tm2411591-1_424b3.htm,
+7,2024-04-18,Bank of America Corp.,2024-04-18_424B2_005331,https://sec.gov/Archives/edgar/data/0000070858/000148105724005331/form424b2.htm,
+8,2024-04-18,Bank of America Corp.,2024-04-18_424B2_005326,https://sec.gov/Archives/edgar/data/0000070858/000148105724005326/form424b2.htm,
+9,2024-04-18,Bank of America Corp.,2024-04-18_424B2_005324,https://sec.gov/Archives/edgar/data/0000070858/000148105724005324/form424b2.htm,
+10,2024-04-18,Bank of America Corp.,2024-04-18_424B2_005323,https://sec.gov/Archives/edgar/data/0000070858/000148105724005323/form424b2.htm,
