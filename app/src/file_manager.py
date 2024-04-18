@@ -5,7 +5,7 @@ import re
 
 
 class FileManager:
-    def __init__(self, cik, company_name, filings, base_folder="filings"):
+    def __init__(self, cik, company_name, filings, base_folder="data/filings"):
         self.cik = cik
         self.company_name = company_name
         self.filings = filings

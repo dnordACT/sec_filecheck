@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary Database</title>
+</head>
+<body>
+    <h1>Summary Database</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Company Name</th>
+            <th>Source</th>
+            <th>Link</th>
+            <th>Summary</th>
+        </tr>
+        {% for summary in summaries %}
+        <tr>
+            <td>{{ summary['id'] }}</td>
+            <td>{{ summary['date'] }}</td>
+            <td>{{ summary['company_name'] }}</td>
+            <td>{{ summary['source'] }}</td>
+            <td><a href="{{ summary['link'] }}">Link</a></td>
+            <td>{{ summary['summary'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

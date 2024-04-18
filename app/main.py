@@ -1,19 +1,19 @@
-from sec_api_client import SecApiClient
-from file_manager import FileManager
-from database_mgr import DatabaseManager
+from src.sec_api_client import SecApiClient
+from src.file_manager import FileManager
+from src.database_mgr import DatabaseManager
 from pathlib import Path
 import os
 import json
 import datetime
 
 # Load the JSON of companies as a dictionary.
-with open("company_codes.json") as file:
+with open("data/company_codes.json") as file:
     company_codes = json.load(file)
 
 def main():
     companies_info = company_codes
 
-    database_mgr = DatabaseManager("summaries.db")
+    database_mgr = DatabaseManager("database/summaries.db")
 
     # Loops through the list from company_codes.  Now all we need to do is update tthe company_codes.json to add or remove companies.
     for cik, name in companies_info.items():
