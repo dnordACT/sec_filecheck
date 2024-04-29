@@ -22,20 +22,21 @@ def main():
         # Initialize SEC API client for the company
         sec_client = SecApiClient(cik=cik)
         filings = sec_client.fetch_sec_filings()
-
         if filings:
-            # Initialize File Manager to save filings
-            file_manager = FileManager(cik=cik, company_name=name, filings=filings)
-            saved_files = file_manager.save_filings()
 
-            for filing in saved_files:
-                file_path = filing['file_path']  # Assuming save_filings now returns a dict with file_path and link
-                link = filing['link']  # Get the link from the filing information
+            for filing in filings:
+                link = filing['link']
+                form = filing['form']
 
-                source_name = Path(file_path).stem
+                database_mgr.update_summary(name, form, link)
+                print(f'saved {name} {form} {link}')
 
-                # Update the database with the new link parameter
-                database_mgr.update_summary(name, source_name, link)
+        # this part of the script is requried if I want to save the filings to a local directory and then upload to an AI model.
+        # if filings:
+        #     # Initialize File Manager to save filings
+        #     file_manager = FileManager(cik=cik, company_name=name, filings=filings)
+        #     saved_files = file_manager.save_filings()
+
 
         else:
             print(f"No new filings found for {name}")
