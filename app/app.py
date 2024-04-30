@@ -1,10 +1,13 @@
 from flask import Flask, render_template
 import sqlite3
+import os
 
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = sqlite3.connect('database/summaries.db')
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(BASE_DIR, 'database', 'summaries.db')
+    conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn
 

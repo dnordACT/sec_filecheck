@@ -6,14 +6,16 @@ import os
 import json
 import datetime
 
+BASE_DIR = Path(__file__).resolve().parent
+
 # Load the JSON of companies as a dictionary.
-with open("data/company_codes.json") as file:
+with open(BASE_DIR / "data" / "company_codes.json") as file:
     company_codes = json.load(file)
 
 def main():
     companies_info = company_codes
 
-    database_mgr = DatabaseManager("database/summaries.db")
+    database_mgr = DatabaseManager(str(BASE_DIR / "database" / "summaries.db"))
 
     # Loops through the list from company_codes.  Now all we need to do is update tthe company_codes.json to add or remove companies.
     for cik, name in companies_info.items():
@@ -46,3 +48,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
