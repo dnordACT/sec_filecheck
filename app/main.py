@@ -30,8 +30,9 @@ def main():
                 link = filing['link']
                 form = filing['form']
 
-                database_mgr.update_summary(name, form, link)
-                print(f'saved {name} {form} {link}')
+                if form not in ['424B2', '424B5', 'FWP']:
+                    database_mgr.update_summary(name, form, link)
+                    print(f'saved {name} {form} {link}')
 
         # this part of the script is requried if I want to save the filings to a local directory and then upload to an AI model.
         # if filings:
