@@ -72,4 +72,4 @@ def companies():
     return render_template('companies.html', company_info=company_info, company_names=company_names)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
