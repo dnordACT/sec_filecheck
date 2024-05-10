@@ -1,5 +1,7 @@
 # SEC Data Collector and Viewer
 
+If running on apache server, make sure to run 0 12 * * * /usr/bin/python3 /var/www/sec_filecheck/app/main.py >> /var/log/mycronlog.log 2>&1 in crontab
+
 This project collects company data from the SEC and provides a web interface for viewing the data.
 
 ## Project Structure

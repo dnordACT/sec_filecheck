@@ -9,10 +9,10 @@ class SecApiClient:
         self.user_agent = user_agent
         self.filings = []
     
-    def fetch_sec_filings(self):
+    def fetch_sec_filings(self, start_days=0, end_days=1):
         # Checks for todays date and the date a day ago.  This is to determine which filings happened in the past day.
-        current_date = datetime.now()
-        day_ago = current_date - timedelta(days=1)
+        start_date = datetime.now() - timedelta(days=start_days)
+        days_ago = start_date - timedelta(days=end_days)
         url = self.base_url.format(self.cik)
         
         headers = {"User-Agent": self.user_agent}
@@ -24,7 +24,7 @@ class SecApiClient:
                                                                        recent_filings.get('accessionNumber', []),
                                                                        recent_filings.get('form', []),
                                                                        recent_filings.get('primaryDocument', [])):
-                if datetime.strptime(date, '%Y-%m-%d') > day_ago:
+                if datetime.strptime(date, '%Y-%m-%d') > days_ago and form not in ['424B2', '424B5', 'FWP']:
                     accession_no_slash = accession_number.replace('-', '')
                     document_url = self.document_base_url.format(cik=self.cik, accession_no_slash=accession_no_slash, primary_document=primary_document)
                     self.filings.append({

@@ -1,41 +1,35 @@
-from src.sec_api_client import SecApiClient
-from src.file_manager import FileManager
-from src.database_mgr import DatabaseManager
 from pathlib import Path
-import os
-import json
+from src.database_mgr import DatabaseManager
+from src.sec_api_client import SecApiClient
 import datetime
 
-# Load the JSON of companies as a dictionary.
-with open("data/company_codes.json") as file:
-    company_codes = json.load(file)
+BASE_DIR = Path(__file__).resolve().parent
 
 def main():
-    companies_info = company_codes
+    # Initialize the database manager with the paths to the SQLite database and CSV file
+    database_mgr = DatabaseManager(str(BASE_DIR / "database" / "summaries.db"), str(BASE_DIR / "data" / "company_list.csv"))
 
-    database_mgr = DatabaseManager("database/summaries.db")
+    # Retrieve the list of companies from the companies table
+    companies_info = database_mgr.get_company_info()
 
-    # Loops through the list from company_codes.  Now all we need to do is update tthe company_codes.json to add or remove companies.
-    for cik, name in companies_info.items():
-        print(f"Processing {name} with CIK: {cik}")
+    for company in companies_info:
+        company_id = company['company_id']  # Ensure this is not a tuple
+        name = company['company_name']
+        cik_code = company['company_cik']
 
-        # Initialize SEC API client for the company
-        sec_client = SecApiClient(cik=cik)
+        print(f"Processing {name} with CIK: {cik_code}")
+
+        # Initialize SEC API client for the company (dummy class here, replace with the actual one)
+        sec_client = SecApiClient(cik=cik_code)
         filings = sec_client.fetch_sec_filings()
-
         if filings:
-            # Initialize File Manager to save filings
-            file_manager = FileManager(cik=cik, company_name=name, filings=filings)
-            saved_files = file_manager.save_filings()
+            for filing in filings:
+                date = filing['recentFilingDate']
+                link = filing['link']
+                form = filing['form']
 
-            for filing in saved_files:
-                file_path = filing['file_path']  # Assuming save_filings now returns a dict with file_path and link
-                link = filing['link']  # Get the link from the filing information
-
-                source_name = Path(file_path).stem
-
-                # Update the database with the new link parameter
-                database_mgr.update_summary(name, source_name, link)
+                database_mgr.update_summary(date, company_id, name, form, link)
+                print(f'Saved {name} {form} {link}')
 
         else:
             print(f"No new filings found for {name}")
