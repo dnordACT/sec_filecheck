@@ -1,45 +1,35 @@
-from src.sec_api_client import SecApiClient
-from src.file_manager import FileManager
-from src.database_mgr import DatabaseManager
 from pathlib import Path
-import os
-import json
+from src.database_mgr import DatabaseManager
+from src.sec_api_client import SecApiClient
 import datetime
 
 BASE_DIR = Path(__file__).resolve().parent
 
-# Load the JSON of companies as a dictionary.
-with open(BASE_DIR / "data" / "company_codes.json") as file:
-    company_codes = json.load(file)
-
 def main():
-    companies_info = company_codes
+    # Initialize the database manager with the paths to the SQLite database and CSV file
+    database_mgr = DatabaseManager(str(BASE_DIR / "database" / "summaries.db"), str(BASE_DIR / "data" / "company_list.csv"))
 
-    database_mgr = DatabaseManager(str(BASE_DIR / "database" / "summaries.db"))
+    # Retrieve the list of companies from the companies table
+    companies_info = database_mgr.get_company_info()
 
-    # Loops through the list from company_codes.  Now all we need to do is update tthe company_codes.json to add or remove companies.
-    for cik, name in companies_info.items():
-        print(f"Processing {name} with CIK: {cik}")
+    for company in companies_info:
+        company_id = company['company_id']  # Ensure this is not a tuple
+        name = company['company_name']
+        cik_code = company['company_cik']
 
-        # Initialize SEC API client for the company
-        sec_client = SecApiClient(cik=cik)
+        print(f"Processing {name} with CIK: {cik_code}")
+
+        # Initialize SEC API client for the company (dummy class here, replace with the actual one)
+        sec_client = SecApiClient(cik=cik_code)
         filings = sec_client.fetch_sec_filings()
         if filings:
-
             for filing in filings:
+                date = filing['recentFilingDate']
                 link = filing['link']
                 form = filing['form']
 
-                if form not in ['424B2', '424B5', 'FWP']:
-                    database_mgr.update_summary(name, form, link)
-                    print(f'saved {name} {form} {link}')
-
-        # this part of the script is requried if I want to save the filings to a local directory and then upload to an AI model.
-        # if filings:
-        #     # Initialize File Manager to save filings
-        #     file_manager = FileManager(cik=cik, company_name=name, filings=filings)
-        #     saved_files = file_manager.save_filings()
-
+                database_mgr.update_summary(date, company_id, name, form, link)
+                print(f'Saved {name} {form} {link}')
 
         else:
             print(f"No new filings found for {name}")
@@ -49,5 +39,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Companies Database</title>
+</head>
+<body>
+    <h1>Companies Database</h1>
+
+    <form method="get" action="/companies">
+        <label for="company_name">Select Company:</label>
+        <select name="company_name" id="company_name">
+            <option value="">Select a Company</option>
+            {% for name in company_names %}
+                <option value="{{ name['company_name'] }}" {% if name['company_name'] == request.args.get('company_name') %} selected {% endif %}>{{ name['company_name'] }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">View</button>
+    </form>
+
+    {% if company_info %}
+    <h2>Company Details</h2>
+    <table border="1">
+        <tr>
+            <th>Company Name</th>
+            <td>{{ company_info['company_name'] }}</td>
+        </tr>
+        <tr>
+            <th>Ticker</th>
+            <td>{{ company_info['company_ticker'] }}</td>
+        </tr>
+        <tr>
+            <th>CIK</th>
+            <td>{{ company_info['company_cik'] }}</td>
+        </tr>
+        <tr>
+            <th>Assigned To</th>
+            <td>{{ company_info['assigned_to'] }}</td>
+        </tr>
+        <tr>
+            <th>Most Recent Date</th>
+            <td>{{ company_info['most_recent_date'] }}</td>
+        </tr>
+        <tr>
+            <th>Most Recent Form</th>
+            <td>{{ company_info['most_recent_form'] }}</td>
+        </tr>
+        <tr>
+            <th>Most Recent Link</th>
+            <td><a href="{{ company_info['most_recent_link'] }}">Link</a></td>
+        </tr>
+        <tr>
+            <th>Most Recent Summary</th>
+            <td>{{ company_info['most_recent_summary'] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+</body>
+</html>
