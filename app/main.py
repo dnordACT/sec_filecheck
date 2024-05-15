@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 def main():
     # Initialize the database manager with the paths to the SQLite database and CSV file
-    database_mgr = DatabaseManager(str(BASE_DIR / "database" / "summaries.db"), str(BASE_DIR / "data" / "company_list.csv"))
+    database_mgr = DatabaseManager(companies_csv_path=str(BASE_DIR / "data" / "company_list.csv"))
 
     # Retrieve the list of companies from the companies table
     companies_info = database_mgr.get_company_info()

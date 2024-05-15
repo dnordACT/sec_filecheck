@@ -1,3 +1,6 @@
 requests
 flask
 pandas
+sqlalchemy>=1.4
+pg8000>=1.16
+python-dotenv>=0.19
