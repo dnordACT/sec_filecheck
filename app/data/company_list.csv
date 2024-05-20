@@ -1,53 +1,53 @@
 company_id,company_name,company_ticker,company_cik,assigned_to
-49bdaf2e-db66-11eb-84bd-06156affe90a,Accenture,ACN,0001467373,Jessica
-e3a8e420-61e5-11e9-a3ed-02d962f59f52,AVANGRID,AGR,0001634997,Dustin
-a3006170-6850-11e9-9694-02d06230d2dc,Amphenol,APH,0000820313,Dustin
-ee85ea68-2d74-11ea-9b0c-02d06230d2dc,ASML,ASML,0000937966,Dustin
-e8da050c-768d-40bf-1416-536a85988351,Bank of America,BAC,0000070858,Ben
-1b9936ea-5e4e-11ea-a1aa-02d962f59f52,Booking Holdings,BKNG,0001075531,Jessica
-c8d64596-72d4-11eb-a98d-02d06230d2dc,Chubb,CB,0000896159,Ben
-b513dda0-e45c-11e9-9ab8-06156affe90a,Charter Communications,CHTR,0001091667,Ben
-d1043f4a-678f-11e9-87c6-069eed229002,CIGNA,CI,0001739940,Ben
-e8cf0932-26de-11ec-a6a8-06156affe90a,Crane Co.,CR,0001944013,Dustin
-599e1c27-7d33-3b0b-3d13-536a85d0c760,"Aetna, Inc.",CVS,0000064803,Ben
-3b6875a0-be2f-11ed-a176-069eed229002,Diageo,DEO,0000835403,Dustin
-79761ca0-35a3-11ec-9b83-02d06230d2dc,EMCOR Group,EMKR/EME?,0000105634,Jessica
-d5c8e0fa-be2d-11ed-a8ba-06156affe90a,Edgewell Personal Care,EPC,0001096752,Jessica
-a4743986-660f-837d-6a5c-536a85210dd5,Eversource Energy,ES,0000072741,Dustin
-1ff83704-2cda-11ea-9a5d-02d06230d2dc,FactSet Research Systems Inc.,FDS,0001013237,Jessica
-a78f6aa4-7e93-8a73-3446-56bb4baff46c,"General Dynamics, Electric Boat",GD,0000040533,Dustin
-2773a2b4-016c-b7ec-8a29-536a85c2f687,The Hartford,HIG,0000874766,Ben
-9eb2ed44-2d5e-11ea-933c-069eed229002,Hubbell Incorporated,HUBB,0000048898,Dustin
-7b427822-27ab-11ec-91f1-069eed229002,Hexcel Corporation,HXL,0000717605,Dustin
-730c15e4-36a3-11ec-b58a-02d962f59f52,"Interactive Brokers Group, Inc.",IBKR,0001381197,Ben
-804032e6-5496-11e9-ab0b-02392e249278,IBM Global Services,IBM,0000051143,Jessica
-6f904d20-da1d-11e9-a0ee-069eed229002,Infosys Limited,INFY,0001067491,Jessica
-0bcb4838-53b1-11ed-adc7-02d06230d2dc,IQVIA,IQV,0001478242,Jessica
-e7c8c20b-f16c-bf2b-a394-536a85ed91d6,Gartner Inc.,IT,0000749251,Jessica
-3783e386-57fc-11ee-a908-06156affe90a,ITT,ITT,0000216228,Jessica
-ca56b18f-3ab0-0e21-46bb-54f61f07c7e0,Kaman Corporation,KAMN,0000054381,Dustin
-b7772343-ef26-1ade-a1e6-55b7930d396c,Lockheed Martin,LMT,0000936468,Dustin
-6a5c8066-0193-11ee-bb5a-069eed229002,Lovesac,LOVE,0001701758,Ben
-b0e5dcb4-16d5-11ea-a1ac-02d06230d2dc,Medtronic,MDT,0001613103,Jessica
-ec6ea7a2-7eb1-11ec-b551-069eed229002,MannKind Corporation,MNKD,0000899460,Dustin
-addb448d-7bfa-3318-c3ef-536a85d0e439,M&T Bank,MTB,0000036270,Ben
-fadc3904-2d6d-11ea-943f-069eed229002,Otis Elevator,OTIS,0001781335,Dustin
-11e26f72-0370-a809-dee4-536a858f5d6b,Pitney Bowes Inc.,PBI,0000078814,Jessica
-7156be71-36a5-0423-46ee-536a8573a7f1,Pfizer Inc.,PFE,0000078003,Jessica
-326cf97a-0fbf-11ea-ba1f-02d962f59f52,Philip Morris International (PMI),PM,0001413329,Jessica
-8436f3f4-90a4-47b0-6b8f-55b7932c4a93,RBC Bearings,RBC,0001324948,Dustin
-54a8cdfc-be2b-11ed-9e78-06156affe90a,RTX,RTX,0000101829,Dustin
-c7075ad4-27bf-11ec-bfc2-02d962f59f52,Silgan Holdings Inc.,SLGN,0000849869,Dustin
-e940dfab-ca66-aac1-e966-536a85754136,SS&C Technologies Holdings,SSNC,0001402436,Jessica
-85551fc6-0118-11e8-baf9-0250d4f82a21,Stanley Black & Decker,SWK,0000093556,Dustin
-e108c678-0a13-11ea-92d3-06156affe90a,Synchrony,SYF,0001601712,Ben
-81fb261e-53b0-11ed-a993-02d06230d2dc,Terex Corporation,TEX,0000097216,Dustin
-f362c8c4-3c6c-11ea-908d-06156affe90a,WWE,TKO,0001973266,Ben
-9765b47a-2c57-88c1-f717-536a85c2f676,Travelers,TRV,0000086312,Ben
-b3ea0382-9e40-9db9-17b9-536a8504b73f,UnitedHealth Group,UNH,0000731766,Ben
-7da0c46c-27be-11ec-901b-069eed229002,"United Rentals, Inc.",URI,0001067701,Ben
-41f43cd6-e7c4-11ea-92c9-069eed229002,Voya Financial,VOYA,0001535929,Ben
-cbad2db9-8666-312a-4e64-536a851a5e14,Webster Bank,WBS,0000801337,Ben
-eae791ad-ccfb-59e4-7518-536a854b85b7,W.R. Berkley Corp.,WRB,0000011544,Ben
-a6f6a26d-1f47-4f56-a3a3-57f5103302c1,XPO Logistics,XPO,0001166003,Dustin
-99384c0c-0fc6-11ea-ab5c-02d06230d2dc,Xerox Holdings Corporation,XRX,0001770450,Jessica
+49bdaf2e-db66-11eb-84bd-06156affe90a,Accenture,ACN,0001467373,Jessica Jackson
+e3a8e420-61e5-11e9-a3ed-02d962f59f52,AVANGRID,AGR,0001634997,Dustin Nord
+a3006170-6850-11e9-9694-02d06230d2dc,Amphenol,APH,0000820313,Dustin Nord
+ee85ea68-2d74-11ea-9b0c-02d06230d2dc,ASML,ASML,0000937966,Dustin Nord
+e8da050c-768d-40bf-1416-536a85988351,Bank of America,BAC,0000070858,Ben Ianuzzi
+1b9936ea-5e4e-11ea-a1aa-02d962f59f52,Booking Holdings,BKNG,0001075531,Jessica Jackson
+c8d64596-72d4-11eb-a98d-02d06230d2dc,Chubb,CB,0000896159,Ben Ianuzzi
+b513dda0-e45c-11e9-9ab8-06156affe90a,Charter Communications,CHTR,0001091667,Ben Ianuzzi
+d1043f4a-678f-11e9-87c6-069eed229002,CIGNA,CI,0001739940,Ben Ianuzzi
+e8cf0932-26de-11ec-a6a8-06156affe90a,Crane Co.,CR,0001944013,Dustin Nord
+599e1c27-7d33-3b0b-3d13-536a85d0c760,"Aetna, Inc.",CVS,0000064803,Ben Ianuzzi
+3b6875a0-be2f-11ed-a176-069eed229002,Diageo,DEO,0000835403,Dustin Nord
+79761ca0-35a3-11ec-9b83-02d06230d2dc,EMCOR Group,EMKR/EME?,0000105634,Jessica Jackson
+d5c8e0fa-be2d-11ed-a8ba-06156affe90a,Edgewell Personal Care,EPC,0001096752,Jessica Jackson  
+a4743986-660f-837d-6a5c-536a85210dd5,Eversource Energy,ES,0000072741,Dustin Nord
+1ff83704-2cda-11ea-9a5d-02d06230d2dc,FactSet Research Systems Inc.,FDS,0001013237,Jessica Jackson
+a78f6aa4-7e93-8a73-3446-56bb4baff46c,"General Dynamics, Electric Boat",GD,0000040533,Dustin Nord
+2773a2b4-016c-b7ec-8a29-536a85c2f687,The Hartford,HIG,0000874766,Ben Ianuzzi
+9eb2ed44-2d5e-11ea-933c-069eed229002,Hubbell Incorporated,HUBB,0000048898,Dustin Nord
+7b427822-27ab-11ec-91f1-069eed229002,Hexcel Corporation,HXL,0000717605,Dustin Nord
+730c15e4-36a3-11ec-b58a-02d962f59f52,"Interactive Brokers Group, Inc.",IBKR,0001381197,Ben Ianuzzi
+804032e6-5496-11e9-ab0b-02392e249278,IBM Global Services,IBM,0000051143,Jessica Jackson
+6f904d20-da1d-11e9-a0ee-069eed229002,Infosys Limited,INFY,0001067491,Jessica Jackson
+0bcb4838-53b1-11ed-adc7-02d06230d2dc,IQVIA,IQV,0001478242,Jessica Jackson
+e7c8c20b-f16c-bf2b-a394-536a85ed91d6,Gartner Inc.,IT,0000749251,Jessica Jackson
+3783e386-57fc-11ee-a908-06156affe90a,ITT,ITT,0000216228,Jessica Jackson
+ca56b18f-3ab0-0e21-46bb-54f61f07c7e0,Kaman Corporation,KAMN,0000054381,Dustin Nord
+b7772343-ef26-1ade-a1e6-55b7930d396c,Lockheed Martin,LMT,0000936468,Dustin Nord
+6a5c8066-0193-11ee-bb5a-069eed229002,Lovesac,LOVE,0001701758,Ben Ianuzzi
+b0e5dcb4-16d5-11ea-a1ac-02d06230d2dc,Medtronic,MDT,0001613103,Jessica Jackson
+ec6ea7a2-7eb1-11ec-b551-069eed229002,MannKind Corporation,MNKD,0000899460,Dustin Nord
+addb448d-7bfa-3318-c3ef-536a85d0e439,M&T Bank,MTB,0000036270,Ben Ianuzzi
+fadc3904-2d6d-11ea-943f-069eed229002,Otis Elevator,OTIS,0001781335,Dustin Nord
+11e26f72-0370-a809-dee4-536a858f5d6b,Pitney Bowes Inc.,PBI,0000078814,Jessica Jackson
+7156be71-36a5-0423-46ee-536a8573a7f1,Pfizer Inc.,PFE,0000078003,Jessica Jackson
+326cf97a-0fbf-11ea-ba1f-02d962f59f52,Philip Morris International (PMI),PM,0001413329,Jessica Jackson
+8436f3f4-90a4-47b0-6b8f-55b7932c4a93,RBC Bearings,RBC,0001324948,Dustin Nord
+54a8cdfc-be2b-11ed-9e78-06156affe90a,RTX,RTX,0000101829,Dustin Nord
+c7075ad4-27bf-11ec-bfc2-02d962f59f52,Silgan Holdings Inc.,SLGN,0000849869,Dustin Nord
+e940dfab-ca66-aac1-e966-536a85754136,SS&C Technologies Holdings,SSNC,0001402436,Jessica Jackson
+85551fc6-0118-11e8-baf9-0250d4f82a21,Stanley Black & Decker,SWK,0000093556,Dustin Nord
+e108c678-0a13-11ea-92d3-06156affe90a,Synchrony,SYF,0001601712,Ben Ianuzzi
+81fb261e-53b0-11ed-a993-02d06230d2dc,Terex Corporation,TEX,0000097216,Dustin Nord
+f362c8c4-3c6c-11ea-908d-06156affe90a,WWE,TKO,0001973266,Ben Ianuzzi
+9765b47a-2c57-88c1-f717-536a85c2f676,Travelers,TRV,0000086312,Ben Ianuzzi
+b3ea0382-9e40-9db9-17b9-536a8504b73f,UnitedHealth Group,UNH,0000731766,Ben Ianuzzi
+7da0c46c-27be-11ec-901b-069eed229002,"United Rentals, Inc.",URI,0001067701,Ben Ianuzzi
+41f43cd6-e7c4-11ea-92c9-069eed229002,Voya Financial,VOYA,0001535929,Ben Ianuzzi 
+cbad2db9-8666-312a-4e64-536a851a5e14,Webster Bank,WBS,0000801337,Ben Ianuzzi    
+eae791ad-ccfb-59e4-7518-536a854b85b7,W.R. Berkley Corp.,WRB,0000011544,Ben Ianuzzi  
+a6f6a26d-1f47-4f56-a3a3-57f5103302c1,XPO Logistics,XPO,0001166003,Dustin Nord
+99384c0c-0fc6-11ea-ab5c-02d06230d2dc,Xerox Holdings Corporation,XRX,0001770450,Jessica Jackson
